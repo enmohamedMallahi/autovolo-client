@@ -20,8 +20,8 @@ const Search = () => {
     router.push(`/search?make=${ filters.make }&fuel=${ filters.fuelType }&transmission=${ filters.transmissionType }`);
   };
 
-  const makes = ['dacia', 'ford', 'mercedes', 'renault'];
-  const fuelTypes = ['petrol', 'diesel', 'electric', 'hybrid'];
+  const makes = ['Dacia', 'Ford', 'Mercedes', 'Renault'];
+  const fuelTypes = ['Petrol', 'Diesel', 'Electric', 'Hybrid'];
   const transmissionTypes = ['automatic', 'manual'];
 
   return (
