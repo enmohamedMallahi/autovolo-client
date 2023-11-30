@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import Search from '@/components/Searcher';
 import CarsList from '@/components/CarsList';
-import Hero from '@/components/Hero';
+import Heroo from '@/components/Heroo';
 
 const Home = () => {
   const [cars, setCars] = useState([]);
@@ -101,6 +101,8 @@ const Home = () => {
 
   return (
     <div className="">
+
+      <Heroo />
 
       {/* <Hero /> */}
 

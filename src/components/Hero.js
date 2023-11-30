@@ -1,39 +1,21 @@
-import React from 'react'
+// components/HeroSection.js
 
-const Hero = () => {
+const HeroSection = () => {
   return (
-
-    <section class="flex flex-col justify-between gap-6 md:gap-10 py-4 lg:flex-row">
-
-      <div class="flex flex-col justify-between xl:w-5/12">
-        <div></div>
-
-        <div class="sm:text-center lg:py-12 lg:text-left xl:py-24">
-
-
-          <h1 class="mb-8 text-2xl font-bold text-black  md:mb-12 md:text-4xl">Revolutionary way to build the web</h1>
-
-          <div class="flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start">
-            <a href="#" class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">Start now</a>
-
-            <a href="#" class="inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base">Take tour</a>
-          </div>
-        </div>
-
-
-
-
+    <section className="border py-8 md:h-[50vh] flex flex-col md:flex-row items-center justify-center gap-8">
+      <div className=" text-center md:text-left">
+        <h1 className="text-3xl md:text-4xl font-extrabold mb-4">MODÈLES DE VÉHICULES</h1>
+        <p className="text-lg md:text-xl mb-8">RÉSERVEZ MAINTENANT ET OBTENEZ LA MEILLEURE OFFRE</p>
+        <a
+          href="#booking"
+          className="bg-blue-500 text-white px-8 py-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300 text-lg md:text-md"
+        >
+          Book Now
+        </a>
       </div>
-
-
-
-      <div class="h-40 hidden md:block overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:h-60 xl:w-6/12">
-        <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&q=75&fit=crop&w=1000" loading="lazy" alt="Photo by Fakurian Design" class="h-full w-full object-cover object-center" />
-      </div>
-
+      <img src="./images/main-car.png" alt="Autovolo Car Rental" className="md:w-[50%] w-[80%]" />
     </section>
+  );
+};
 
-  )
-}
-
-export default Hero
+export default HeroSection;

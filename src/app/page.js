@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import Search from '@/components/Searcher';
 import CarsList from '@/components/CarsList';
 import Hero from '@/components/Hero';
+import ContactSection from '@/components/ContactSection';
+import BookingForm from '@/components/BookingForm';
 
 const Home = () => {
   const [cars, setCars] = useState([]);
@@ -102,18 +104,26 @@ const Home = () => {
   return (
     <div className="">
 
-      {/* <Hero /> */}
+      <Hero />
 
-      <section className="flex flex-col-reverse md:flex-row gap-4">
+      <BookingForm />
+
+      {/* <section className="flex flex-col-reverse md:flex-row gap-4">
         <div class="md:w-5/12">
           <Search />
         </div>
         <div class=" overflow-hidden rounded-lg bg-gray-100 shadow-lg md:w-7/12 h-auto">
-          <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&q=75&fit=crop&w=1000" loading="lazy" alt="Photo by Fakurian Design" class="h-full w-full object-cover object-center" />
+          <img
+            src="https://macyscars.ma/wp-content/uploads/2021/04/2020-range-roverpreview.png"
+            loading="lazy"
+            alt="Photo by Fakurian Design"
+            class="h-full w-full object-cover object-center" />
         </div>
-      </section>
+      </section> */}
 
       <CarsList cars={cars} />
+
+      <ContactSection />
 
     </div>
   );
