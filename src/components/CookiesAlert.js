@@ -7,15 +7,15 @@ const CookieAlert = () => {
 
   const acceptCookies = () => {
     setAccepted(true);
-    if (localStorage) {
-      localStorage.setItem('cookiesAccepted', 'true');
+    if (window) {
+      window?.localStorage?.setItem('cookiesAccepted', 'true');
     }
   };
 
   let shouldShowAlert
 
-  if (localStorage) {
-    shouldShowAlert = !accepted && !localStorage?.getItem('cookiesAccepted');
+  if (window) {
+    shouldShowAlert = !accepted && !window?.localStorage?.getItem('cookiesAccepted');
   }
 
 
