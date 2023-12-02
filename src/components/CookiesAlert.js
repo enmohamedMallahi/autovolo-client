@@ -7,16 +7,16 @@ const CookieAlert = () => {
 
   const acceptCookies = () => {
     setAccepted(true);
-    if (window) {
-      window?.localStorage?.setItem('cookiesAccepted', 'true');
-    }
+    // if (window) {
+    //   window?.localStorage?.setItem('cookiesAccepted', 'true');
+    // }
   };
 
-  let shouldShowAlert
+  let shouldShowAlert = !accepted
 
-  if (window) {
-    shouldShowAlert = !accepted && !window?.localStorage?.getItem('cookiesAccepted');
-  }
+  // if (window) {
+  //   shouldShowAlert = !accepted && !window?.localStorage?.getItem('cookiesAccepted');
+  // }
 
 
   return (
