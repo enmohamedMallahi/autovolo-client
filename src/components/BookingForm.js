@@ -40,7 +40,7 @@ const BookingForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className=" bg-yellow-400 p-8 h">
+    <form id="booking" onSubmit={handleSubmit} className=" bg-yellow-400 p-8 h">
       <h2 className="text-4xl text-white font-bold text-center mb-6 ">Book Your Car</h2>
 
       <div className="mb-4">
@@ -65,7 +65,7 @@ const BookingForm = () => {
         </select>
       </div>
 
-      <div className="flex gap-4 mb-4">
+      <div className="  flex gap-4 mb-4">
         <div className="w-full">
           <label htmlFor="pickupDate" className="block text-sm font-medium text-white">
             Pickup Date

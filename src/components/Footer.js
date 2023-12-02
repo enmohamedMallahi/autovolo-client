@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Footer = () => {
@@ -7,10 +8,9 @@ const Footer = () => {
         <div class="flex flex-col items-center border-t pt-6">
 
           <nav class="mb-4 flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start md:gap-6">
-            <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">About</a>
+            <Link href="/about" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">About</Link>
             <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Investor Relations</a>
             <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Jobs</a>
-            <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Press</a>
             <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Blog</a>
           </nav>
 

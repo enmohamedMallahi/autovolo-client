@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className=" text-gray-600">
       <div className="px-4 py-4 md:px-8 lg:px-16 flex items-center justify-between">
         <a href="/" className="text-gray-800 text-xl font-bold">
-          Car Rental
+          Autovolo
         </a>
 
         <div className="md:hidden">
@@ -46,7 +46,7 @@ const Navbar = () => {
           <div className="md:hidden fixed top-0 bottom-0 left-0 right-0 bg-gray-800 text-white z-50 ">
             <div className="py-4 px-4 md:px-8 lg:px-16 mb-4 flex items-center justify-between">
               <a href="/" className="text-white text-xl font-bold">
-                Car Rental
+                Autovolo
               </a>
               <div className="md:hidden">
                 <button
