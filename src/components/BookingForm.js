@@ -40,8 +40,8 @@ const BookingForm = () => {
   };
 
   return (
-    <form id="booking" onSubmit={handleSubmit} className=" bg-yellow-400 p-8 h">
-      <h2 className="text-4xl text-white font-bold text-center mb-6 ">Book Your Car</h2>
+    <form id="booking" onSubmit={handleSubmit} className=" bg-green-400 p-8 h">
+      <h2 className="text-3xl md:text-4xl text-white font-bold text-center mb-6 ">Book Your Car</h2>
 
       <div className="mb-4">
         <select
@@ -65,7 +65,7 @@ const BookingForm = () => {
         </select>
       </div>
 
-      <div className="  flex gap-4 mb-4">
+      <div className="flex flex-col md:flex-row gap-4 mb-4">
         <div className="w-full">
           <label htmlFor="pickupDate" className="block text-sm font-medium text-white">
             Pickup Date
@@ -100,7 +100,7 @@ const BookingForm = () => {
       </div>
 
 
-      <div className="flex gap-4 mb-4">
+      <div className="flex flex-col md:flex-row  gap-4 mb-6">
         <div className="w-full">
           <label htmlFor="pickupPlace" className="block text-sm font-medium text-white">
             Pickup Place
@@ -152,7 +152,7 @@ const BookingForm = () => {
       <div className="flex items-center justify-center">
         <button
           type="submit"
-          className="w-full bg-black text-white px-6 py-3 rounded-md hover:opacity-90 focus:outline-none focus:ring focus:border-blue-300"
+          className="w-full bg-black text-white px-6 py-3 rounded-md hover:opacity-90 focus:outline-none focus:ring focus:border-blue-300 animate-bounce"
         >
           Book Now
         </button>

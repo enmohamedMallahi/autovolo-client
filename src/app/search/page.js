@@ -53,11 +53,9 @@ const SearchPage = ({ searchParams }) => {
 
       {/* <h2 className="text-2xl text-center font-bold my-4"></h2> */}
 
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <CarsList showBookButton={true} cars={cars} openModal={openModal} />
-      )}
+
+      <CarsList loading={loading} showBookButton={true} cars={cars} openModal={openModal} />
+
 
 
 

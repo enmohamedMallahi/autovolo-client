@@ -8,7 +8,7 @@ const HeroSection = () => {
         <p className="text-lg md:text-xl mb-8">RÉSERVEZ MAINTENANT ET OBTENEZ LA MEILLEURE OFFRE</p>
         <a
           href="#booking"
-          className="bg-blue-500 text-white px-8 py-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300 text-lg md:text-md"
+          className="bg-green-500 text-white px-8 py-3 rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-green-300 text-lg md:text-md animate-bounce"
         >
           Book Now
         </a>
