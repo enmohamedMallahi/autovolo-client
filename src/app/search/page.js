@@ -1,49 +1,12 @@
 "use client"
-import { useRouter } from 'next/navigation';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import ConfirmationModal from '@/components/ConfirmationModal';
+import cars from '@/data/cars';
 import CarsList from '@/components/CarsList';
 
 
+
 const SearchPage = ({ searchParams }) => {
-  const router = useRouter();
-  const { carBrand } = searchParams;
-
-  const [cars, setCars] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [selectedCar, setSelectedCar] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    const fetchCars = async () => {
-      try {
-        const response = await axios.get(`https://autovolo-admin.vercel.app/api/cars?make=${ carBrand }`);
-        setCars(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching cars:', error);
-        setLoading(false);
-      }
-    };
-
-    fetchCars();
-  }, [carBrand]);
-
-
-  const openModal = (car) => {
-    setSelectedCar(car);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleBook = (customerName) => {
-    // Implement the booking logic here, e.g., make an API request
-    console.log(`Booking ${ selectedCar.model } for ${ customerName }`);
-  };
+  const { make } = searchParams;
+  const filteredCars = cars.filter(car => car.make == make);
 
 
   return (
@@ -54,19 +17,8 @@ const SearchPage = ({ searchParams }) => {
       {/* <h2 className="text-2xl text-center font-bold my-4"></h2> */}
 
 
-      <CarsList loading={loading} showBookButton={true} cars={cars} openModal={openModal} />
+      <CarsList cars={filteredCars} />
 
-
-
-
-      {(selectedCar && isModalOpen) && (
-        <ConfirmationModal
-          carDetails={selectedCar}
-          handleClose={closeModal}
-          handleBook={handleBook}
-          bookingData={searchParams}
-        />
-      )}
     </div>
   );
 };
