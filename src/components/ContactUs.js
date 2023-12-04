@@ -13,7 +13,7 @@ const ContactSection = () => {
           Vous avez des questions ou avez besoin d'informations complémentaires.
         </p>
         <p className="text-white mb-4">Address: 17 RDC Rue 158 Hay INARA, Casablanca, Morocco</p>
-        <strong className="text-yellow-400 text-2xl">+212661356061</strong>
+        <strong className="text-yellow-400 text-2xl">+21268888888</strong>
         {/* Add your contact form or additional information here */}
       </div>
     </section>

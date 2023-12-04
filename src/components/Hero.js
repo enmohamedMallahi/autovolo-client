@@ -2,10 +2,10 @@
 
 const HeroSection = () => {
   return (
-    <section className="min-h-96 relative flex flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 py-16 shadow-lg md:py-20 xl:py-48">
+    <section className="min-h-96 relative flex flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 py-16 shadow-lg md:py-20 xl:py-48 mb-4 mx-4 md:px-8 lg:px-16">
       {/* Background Image */}
       <img
-        src="https://images.carexpert.com.au/crop/600/1100/app/uploads/2023/09/genesis-kr-gv80-coupe-multiple-interaction-terrain-mode-car-bg-large.jpg"
+        src="https://preview.redd.it/0uermbt9q8b61.jpg?width=640&crop=smart&auto=webp&s=c7536f51a1fd27ceadc78e805a2981fc68598740"
         loading="lazy"
         alt="Photo by Fakurian Design"
         className="absolute inset-0 h-full w-full object-cover object-center"
@@ -16,8 +16,9 @@ const HeroSection = () => {
 
       {/* Hero Text */}
       <div className="relative flex flex-col items-center p-4 sm:max-w-xl">
-        <p className="mb-4 text-center text-lg text-indigo-200 sm:text-xl md:mb-8">Very proud to introduce</p>
-        <h1 className="mb-8 text-center text-4xl font-bold text-white sm:text-5xl md:mb-12 md:text-6xl">Revolutionary way to build the web</h1>
+        <p className="mb-4 text-center text-lg text-indigo-200 sm:text-xl md:mb-8">Explore the Ultimate Driving Experience</p>
+        <h1 className="mb-8 text-center text-4xl font-bold text-white sm:text-5xl md:mb-12 md:text-6xl">Find Your Perfect Ride with Us</h1>
+
 
         {/* Call-to-Action Buttons */}
         <div className="flex w-full flex-col gap-2.5 sm:flex-row sm:justify-center">

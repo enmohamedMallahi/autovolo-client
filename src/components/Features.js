@@ -24,9 +24,7 @@ const Features = () => {
           <p className="mb-2 text-center text-gray-500">
             Choose from a wide range of vehicles, including sedans, SUVs, and more, to meet your specific needs.
           </p>
-          <a href="#" className="font-bold text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">
-            View Fleet
-          </a>
+         
         </div>
 
         {/* Feature 2: Secure Booking */}
@@ -42,9 +40,7 @@ const Features = () => {
           <p className="mb-2 text-center text-gray-500">
             Your bookings are safe and secure with our trusted online reservation system.
           </p>
-          <a href="#" className="font-bold text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">
-            Learn More
-          </a>
+         
         </div>
 
         {/* Feature 3: Flexible Options */}
@@ -60,9 +56,7 @@ const Features = () => {
           <p className="mb-2 text-center text-gray-500">
             Enjoy flexible rental durations and additional options to tailor your experience.
           </p>
-          <a href="#" className="font-bold text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">
-            Explore Choices
-          </a>
+          
         </div>
       </div>
     </div>
