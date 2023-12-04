@@ -44,7 +44,7 @@ const Footer = () => {
 
         </div>
 
-        <div class="py-8 text-center text-sm text-gray-400">© 2021 - Present Autovolo. All rights reserved.</div>
+        <div class="py-8 text-center text-sm text-gray-400">© 2021-2023 - Present Autovolo. All rights reserved.</div>
       </footer>
     </div>
   )
