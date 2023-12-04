@@ -24,7 +24,7 @@ const ConfirmationModal = ({ carDetails, handleClose, bookingData }) => {
 
   const handleNext = () => {
     setStep(step + 1);
-  };
+  }; 
 
   const handleBook = async () => {
     try {
@@ -63,7 +63,7 @@ const ConfirmationModal = ({ carDetails, handleClose, bookingData }) => {
 
    return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white p-8 rounded-md max-h-[80vh] overflow-y-auto">
+      <div className="bg-white mx-4 md:mx-8 lg:mx-16 p-8 rounded-md max-h-[80vh] overflow-y-auto">
         <h2 className="text-2xl font-bold mb-4">Confirm Booking</h2>
 
         {step === 1 && (
