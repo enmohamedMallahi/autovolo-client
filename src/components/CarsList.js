@@ -1,45 +1,32 @@
+// components/CarsList.js
 import Link from 'next/link';
 
-const BookingForm = () => {
-  const availableMakes = [
-    {
-      name: 'Toyota',
-      logo: './images/Toyota.svg',
-    },
-    { name: 'Honda', logo: './images/Honda.svg' },
-    {
-      name: 'Renault',
-      logo: 'https://seeklogo.com/images/R/renault-logo-18DB8E9AE7-seeklogo.com.png',
-    },
-    {
-      name: 'Peugeot',
-      logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpsJDIBiGMBWIQ8l9kIIhpaw80cGATc-Gh07wwFjarrA&s',
-    },
-    {
-      name: 'Dacia',
-      logo: './images/Dacia.svg',
-    },
-    {
-      name: 'Volkswagen',
-      logo: 'https://seeklogo.com/images/V/Volkswagen-logo-80097D61AA-seeklogo.com.png',
-    },
-  ];
-
+const CarsList = ({ cars }) => {
   return (
-    <div className="bg-indigo-600 p-8 h-full">
-      <h2 className="text-4xl text-white font-bold text-center mb-6">Sélectionnez une marque</h2>
+    <ul className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4 md:px-8 px-4">
+      {cars.map((car) => (
+        <li key={car.id} className="bg-white rounded-md shadow-md flex flex-col items-center">
+          <Link href={`/car/${ car.id }`}>
 
-      <div className="grid grid-cols-2 gap-4 rounded-lg md:grid-cols-3 lg:gap-6">
-        {availableMakes.map(make => (
-          <Link key={make.name} href={`/search?make=${ make?.name }`}>
-            <div className="flex h-16 items-center justify-center rounded-lg bg-gray-100 p-4 text-gray-400 sm:h-32 text-lg hover:scale-105 hover:opacity-90 transition duration-150">
-              <img className="h-16 grayscale w-auto" src={make?.logo} alt={make.name} />
-            </div>
+            <img
+              src={car.images[0]}
+              alt={car.model}
+              className="w-full h-28 md:h-32 lg:h-40 object-cover rounded-md"
+            />
+
           </Link>
-        ))}
-      </div>
-    </div>
+          <div className="text-center p-2">
+            <p className="text-lg font-bold">
+              <Link href={`/car/${ car.id }`}>
+                {car.make} {car.model}
+              </Link>
+            </p>
+            <p className="text-sm mb-">{car.pricePerDay} Dhs/Jours</p>
+          </div>
+        </li>
+      ))}
+    </ul>
   );
 };
 
-export default BookingForm;
+export default CarsList;
