@@ -10,21 +10,21 @@ import Stats from '@/components/Stats';
 const Home = () => {
 
   return (
-    <div className="">
+    <>
 
       <Hero />
 
       <MakeSelector />
 
 
-      <h2 className="text-center font-bold text-2xl md:text-3xl my-4">Our Best Cars</h2>
+      <h2 className="text-center font-bold text-2xl md:text-3xl my-4">Nos meilleures voitures</h2>
       <CarsList cars={cars} />
       <Features />
       <Stats />
 
       <ContactUs />
 
-    </div>
+    </>
   );
 };
 

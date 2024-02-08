@@ -16,13 +16,13 @@ const HeroSection = () => {
 
       {/* Hero Text */}
       <div className="relative flex flex-col items-center p-4 sm:max-w-xl">
-        <p className="mb-4 text-center text-lg text-indigo-200 sm:text-xl md:mb-8">Explore the Ultimate Driving Experience</p>
-        <h1 className="mb-8 text-center text-4xl font-bold text-white sm:text-5xl md:mb-12 md:text-6xl">Find Your Perfect Ride with Us</h1>
+        <p className="mb-4 text-center text-lg text-indigo-200 sm:text-xl md:mb-8">{"Explorez l'expérience de conduite ultime"}</p>
+        <h1 className="mb-8 text-center text-4xl font-bold text-white sm:text-5xl md:mb-12 md:text-6xl">Trouvez la voiture parfaite avec nous</h1>
 
 
         {/* Call-to-Action Buttons */}
         <div className="flex w-full flex-col gap-2.5 sm:flex-row sm:justify-center">
-          <a href="#booking" className="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">  Rent Now</a>
+          <a href="#booking" className="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">Louer maintenant</a>
           {/* <a href="#" className="inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base">Take tour</a> */}
         </div>
       </div>

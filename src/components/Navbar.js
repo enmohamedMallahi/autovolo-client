@@ -1,5 +1,5 @@
 "use client"
-// components/Navbar.js
+
 import { useState } from 'react';
 
 const Navbar = () => {
@@ -20,7 +20,7 @@ const Navbar = () => {
           <button
             onClick={toggleMenu}
             className=" focus:outline-none"
-            aria-label="Toggle menu"
+            aria-label="Basculer le menu"
           >
 
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -32,10 +32,10 @@ const Navbar = () => {
 
         <div className="hidden md:flex space-x-4">
           <a href="/" className="hover:underline hover:text-blue-400 underline-offset-8 transition duration-200">
-            Home
+            Accueil
           </a>
           <a href="/about" className="hover:underline hover:text-blue-400 underline-offset-8 transition duration-200">
-            About
+            À propos
           </a>
           <a href="/contact" className="hover:underline hover:text-blue-400 underline-offset-8 transition duration-200">
             Contact
@@ -52,7 +52,7 @@ const Navbar = () => {
                 <button
                   onClick={toggleMenu}
                   className="text-white focus:outline-none"
-                  aria-label="Toggle menu"
+                  aria-label="Basculer le menu"
                 >
 
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -66,13 +66,13 @@ const Navbar = () => {
               href="/"
               className="block mb-2 py-2 px-4 md:px-8 lg:px-16 hover:bg-gray-700 rounded-md transition duration-300"
             >
-              Home
+              Accueil
             </a>
             <a
               href="/about"
               className="block mb-2 py-2 px-4 md:px-8 lg:px-16 hover:bg-gray-700 rounded-md transition duration-300"
             >
-              About
+              À propos
             </a>
             <a
               href="/contact"
@@ -87,4 +87,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar

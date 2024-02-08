@@ -1,6 +1,5 @@
 "use client"
 import { useState } from 'react';
-import axios from 'axios';
 
 const ConfirmationModal = ({ carDetails, handleClose, bookingData }) => {
   const [step, setStep] = useState(1);
@@ -24,7 +23,7 @@ const ConfirmationModal = ({ carDetails, handleClose, bookingData }) => {
 
   const handleNext = () => {
     setStep(step + 1);
-  }; 
+  };
 
   const handleBook = async () => {
     try {
@@ -47,30 +46,30 @@ const ConfirmationModal = ({ carDetails, handleClose, bookingData }) => {
       // const response = await axios.post('https://autovolo-admin.vercel.app/api/orders', orderData);
 
       // Handle the response as needed (e.g., show a success message)
-      alert('Your request was sent successfully!')
-      console.log('Booking successful:', response.data);
+      alert('Votre demande a été envoyée avec succès !')
+      console.log('Réservation réussie :', response.data);
 
       // Close the modal after successful booking
       handleClose();
     } catch (error) {
       // Handle errors (e.g., show an error message)
-      console.error('Error booking:', error);
+      console.error('Erreur de réservation :', error);
 
       // Close the modal even if there's an error
       handleClose();
     }
   };
 
-   return (
+  return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-white mx-4 md:mx-8 lg:mx-16 p-8 rounded-md max-h-[80vh] overflow-y-auto">
-        <h2 className="text-2xl font-bold mb-4">Confirm Booking</h2>
+        <h2 className="text-2xl font-bold mb-4">Confirmer la réservation</h2>
 
         {step === 1 && (
           <div className="space-y-4">
-            {/* Personal Information Form */}
+            {/* Formulaire d'informations personnelles */}
             <label htmlFor="customerName">
-              <span className="text-sm">Customer Name:</span>
+              <span className="text-sm">Nom du client :</span>
               <input
                 type="text"
                 id="customerName"
@@ -82,7 +81,7 @@ const ConfirmationModal = ({ carDetails, handleClose, bookingData }) => {
             </label>
 
             <label htmlFor="customerEmail">
-              <span className="text-sm">Customer Email:</span>
+              <span className="text-sm">E-mail du client :</span>
               <input
                 type="email"
                 id="customerEmail"
@@ -94,7 +93,7 @@ const ConfirmationModal = ({ carDetails, handleClose, bookingData }) => {
             </label>
 
             <label htmlFor="customerPhone">
-              <span className="text-sm">Customer Phone:</span>
+              <span className="text-sm">Téléphone du client :</span>
               <input
                 type="tel"
                 id="customerPhone"
@@ -107,10 +106,10 @@ const ConfirmationModal = ({ carDetails, handleClose, bookingData }) => {
 
             <div className="flex justify-end mt-4">
               <button onClick={handleClose} className="mr-2 px-4 py-2 border border-gray-300 rounded-md">
-                Cancel
+                Annuler
               </button>
               <button onClick={handleNext} className="px-4 py-2 bg-blue-500 text-white rounded-md">
-                Next
+                Suivant
               </button>
             </div>
           </div>
@@ -118,9 +117,9 @@ const ConfirmationModal = ({ carDetails, handleClose, bookingData }) => {
 
         {step === 2 && (
           <div className="space-y-4">
-            {/* Booking Dates and Places Form */}
+            {/* Formulaire de dates et de lieux de réservation */}
             <label htmlFor="pickupDate">
-              <span className="text-sm">Pickup Date:</span>
+              <span className="text-sm">Date de prise en charge :</span>
               <input
                 type="date"
                 id="pickupDate"
@@ -132,7 +131,7 @@ const ConfirmationModal = ({ carDetails, handleClose, bookingData }) => {
             </label>
 
             <label htmlFor="dropoffDate">
-              <span className="text-sm">Dropoff Date:</span>
+              <span className="text-sm">Date de restitution :</span>
               <input
                 type="date"
                 id="dropoffDate"
@@ -144,7 +143,7 @@ const ConfirmationModal = ({ carDetails, handleClose, bookingData }) => {
             </label>
 
             <label htmlFor="pickupPlace">
-              <span className="text-sm">Pickup Place:</span>
+              <span className="text-sm">Lieu de prise en charge :</span>
               <input
                 type="text"
                 id="pickupPlace"
@@ -156,7 +155,7 @@ const ConfirmationModal = ({ carDetails, handleClose, bookingData }) => {
             </label>
 
             <label htmlFor="dropoffPlace">
-              <span className="text-sm">Dropoff Place:</span>
+              <span className="text-sm">Lieu de restitution :</span>
               <input
                 type="text"
                 id="dropoffPlace"
@@ -169,10 +168,12 @@ const ConfirmationModal = ({ carDetails, handleClose, bookingData }) => {
 
             <div className="flex justify-end mt-4">
               <button onClick={() => setStep(step - 1)} className="mr-2 px-4 py-2 border border-gray-300 rounded-md">
-                Back
+                Retour
+
+
               </button>
               <button onClick={handleBook} className="px-4 py-2 bg-black text-white rounded-md">
-                Book Now
+                Réserver maintenant
               </button>
             </div>
           </div>

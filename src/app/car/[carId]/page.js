@@ -1,6 +1,5 @@
 "use client"
-
-import { useState } from 'react'
+import { useState } from 'react';
 import cars from '@/data/cars';
 import ConfirmationModal from '@/components/ConfirmationModal';
 
@@ -31,14 +30,14 @@ const CarPage = ({ params }) => {
           <div className="bg-gray-300 rounded-md p-2 mb-4">
             <img
               src={selectedCar.images[0]}
-              alt={`${ selectedCar.make } ${ selectedCar.model }`}
+              alt={`${ selectedCar.make } ${ selectedCar.model } `}
               className="mx-auto max-w-[60vw] md:max-w-[40vw] object-cover"
             />
             <h1 className="text-3xl text-center font-bold">{selectedCar.make} {selectedCar.model}</h1>
           </div>
           <div className="text-center">
             {/* Price tag */}
-            <p className="absolute top-0 mb-4 p-2 rounded-md bg-green-500 text-white text-lg ">
+            <p className="absolute top-0 mb-4 p-2 rounded-md bg-green-500 text-white text-lg">
               Price per Day: {selectedCar.pricePerDay} Dhs
             </p>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-5 lg:gap-8 text-sm mb-4">
@@ -101,7 +100,7 @@ const CarPage = ({ params }) => {
         <p>Loading...</p>
       )}
 
-      {(selectedCar && isModalOpen) && (
+      {selectedCar && isModalOpen && (
         <ConfirmationModal
           carDetails={selectedCar}
           handleClose={closeModal}
